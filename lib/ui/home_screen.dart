@@ -1,3 +1,4 @@
+import 'package:applore_task/ui/search.dart';
 import 'package:applore_task/utils/color_constants.dart';
 import 'package:applore_task/widgets/search_field.dart';
 import 'package:flutter/material.dart';
@@ -221,7 +222,11 @@ class _HomeState extends State<Home> {
               ]),
         ),
         Spacer(),
-        Image.asset('assets/pngs/bell.png'),
+        InkWell(
+            onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => Search(),
+                )),
+            child: Image.asset('assets/pngs/bell.png')),
         SizedBox(
           width: 12,
         ),
